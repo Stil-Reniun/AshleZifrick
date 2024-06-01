@@ -1,0 +1,78 @@
+<div class="container pt-5">
+    <div class="d-flex ">
+        <h1 class="p-2 fw-bold fw-josefin">Lista de trabajadores</h1>
+        <p class="ms-auto p-2">
+            <button mat-button (click)="openDialog()" mat-raised-button color="warn" class="rounded-2 w-100">Crear trabajadores</button>
+
+        </p>
+    </div>
+    <mat-form-field>
+        <mat-label>Filtro</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ingrese el texto..." #input>
+    </mat-form-field>
+    <br>
+    <div class="mat-elevation-z8 rounded-1">
+        <table mat-table [dataSource]="dataSourceWorkers">
+            <ng-container matColumnDef="#">
+                <th mat-header-cell *matHeaderCellDef class="fw-bold">Nro.</th>
+                <td mat-cell *matCellDef="let woker" class="">{{ woker.name }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="fullName">
+                <th mat-header-cell *matHeaderCellDef class="fw-bold">Nombre Completo</th>
+                <td mat-cell *matCellDef="let woker" class="">{{ woker.name }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="typeDocument">
+                <th mat-header-cell *matHeaderCellDef class="fw-bold">T.Documento</th>
+                <td mat-cell *matCellDef="let woker" class="">{{ woker.lastName }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="numberDocument">
+                <th mat-header-cell *matHeaderCellDef class="fw-bold">N.documento</th>
+                <td mat-cell *matCellDef="let wokers" class="">{{ wokers.username }}</td>
+            </ng-container>
+            <ng-container matColumnDef="birthDate">
+                <th mat-header-cell *matHeaderCellDef class="fw-bold">F.Nacimiento</th>
+                <td mat-cell *matCellDef="let wokers" class="">{{ wokers.username }}</td>
+            </ng-container>
+            <ng-container matColumnDef="entryDate">
+                <th mat-header-cell *matHeaderCellDef class="fw-bold">F.Ingreso</th>
+                <td mat-cell *matCellDef="let wokers" class="">{{ wokers.username }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="edit">
+                <th mat-header-cell *matHeaderCellDef class=" fw-bold">Editar</th>
+                <td mat-cell *matCellDef="let wokers" class="">{{ wokers.phone }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="delete">
+                <th mat-header-cell *matHeaderCellDef class=" fw-bold">Eliminar</th>
+                <td mat-cell *matCellDef="let wokers" class="">{{ wokers.phone }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="viewChildren">
+                <th mat-header-cell *matHeaderCellDef class=" fw-bold">Ver Hijos</th>
+                <td mat-cell *matCellDef="let wokers" class="">{{ wokers.phone }}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let user; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="">
+        </mat-paginator>
+    </div>
+
+
+
+<!--Dialog-->
+
+
+
+
+
+
+
+
+
+</div>

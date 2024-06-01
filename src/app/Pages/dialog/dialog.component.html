@@ -1,0 +1,83 @@
+<div class="container">
+    <h1 mat-dialog-title>Formulario de Registro</h1>
+    <div mat-dialog-content>
+        <div class="row">
+            <div class="col">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Primer nombre</mat-label>
+                    <input matInput placeholder="....">
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Segundo Nombre</mat-label>
+                    <input matInput placeholder="....">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Apellido Paterno</mat-label>
+                    <input matInput placeholder="....">
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Apellido Materno</mat-label>
+                    <input matInput placeholder="....">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Tipo de Documento</mat-label>
+                    <mat-select>
+                        <mat-option value="one">DNI</mat-option>
+                        <mat-option value="two">Pasaporte</mat-option>
+                        <mat-option value="three">Carnet</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Numero de Documento</mat-label>
+                    <input matInput placeholder="....">
+                </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Fecha Nacimiento</mat-label>
+                    <input matInput placeholder="MM/DD/YYYY">
+                    <mat-icon matSuffix>calendar_today</mat-icon>
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                </mat-form-field>
+            </div>
+
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Fecha Ingreso</mat-label>
+                    <input matInput placeholder="MM/DD/YYYY">
+                    <mat-icon matSuffix>calendar_today</mat-icon>
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                </mat-form-field>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button mat-raised-button color="warn" class="rounded-2 w-25">Guardar</button>
+        <button mat-button mat-raised-button mat-dialog-close color="primary" class="rounded-2 w-25">Volver</button>
+    </div>
+
+</div>
